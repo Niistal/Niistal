@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:512BD4,100:38bdf8&height=200&section=header&text=Iker%20Nistal&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Enterprise%20.NET%20Developer%20%40%20GIP%20%E2%80%A2%20SQL%20Server%20%E2%80%A2%20AI%20%26%20Big%20Data&descAlignY=64&descSize=17"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Iker+Nistal&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=Enterprise+NET+Developer+at+GIP+-+SQL+Server+-+AI+Big+Data&descAlignY=62"/>
 
 <!-- TYPING -->
 <p align="center">
@@ -159,4 +159,4 @@ My style: **pragmatic, not hype-driven.** Keep what works, improve what adds val
 
 <p align="center">Add your LinkedIn here for enterprise credibility — recruiters expect it.</p>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:38bdf8,50:512BD4,100:0f172a&height=120&section=footer"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer"/>
