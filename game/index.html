@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Nistal Breakout — revienta la deuda técnica</title>
+<style>
+  :root{--bg:#0f172a;--panel:#111c33;--cyan:#38bdf8;--violet:#512BD4;--txt:#e6edf3;--mut:#8b98ad}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:radial-gradient(1000px 500px at 50% -10%,#1b2a4d 0%,var(--bg) 60%);color:var(--txt);font-family:Consolas,Menlo,monospace;display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:16px}
+  h1{font-size:20px;margin:8px 0 2px;letter-spacing:.5px}
+  h1 span{color:var(--cyan)}
+  p.sub{margin:0 0 10px;color:var(--mut);font-size:13px;text-align:center;max-width:520px}
+  #wrap{position:relative;width:min(480px,94vw)}
+  canvas{width:100%;height:auto;display:block;background:#0a1122;border:2px solid #22345c;border-radius:12px;box-shadow:0 0 40px #512BD455;touch-action:none}
+  #hud{display:flex;gap:8px;justify-content:space-between;margin:10px 0;font-size:13px;color:var(--mut)}
+  #hud b{color:var(--txt)}
+  #overlay{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;background:#0a1122d9;border-radius:12px;text-align:center;padding:20px}
+  #overlay.hidden{display:none}
+  #overlay h2{margin:0;color:var(--cyan);font-size:22px}
+  #overlay p{margin:0;color:var(--mut);font-size:13px;max-width:380px}
+  button{background:linear-gradient(90deg,var(--violet),var(--cyan));border:0;color:#fff;font:700 15px Consolas,monospace;padding:12px 26px;border-radius:999px;cursor:pointer}
+  button:active{transform:scale(.96)}
+  .keys{font-size:12px;color:var(--mut);margin-top:10px;text-align:center}
+  a{color:var(--cyan)}
+</style>
+</head>
+<body>
+<h1>NISTAL <span>BREAKOUT</span> 🧱</h1>
+<p class="sub">Revienta la <b>deuda técnica</b>: VB6 → Framework 4.7.2 → .NET 8. Mueve con ⬅️ ⬘️, ratón o dedo. <a href="https://github.com/Niistal">← volver al perfil</a></p>
+<div id="hud"><span>SCORE <b id="score">0</b></span><span>NIVEL <b id="level">1</b></span><span>VIDAS <b id="lives">3</b></span></div>
+<div id="wrap">
+  <canvas id="c" width="480" height="640"></canvas>
+  <div id="overlay"><h2 id="ovTitle">▶ JUGAR</h2><p id="ovText">Rompe todos los bloques legacy para migrar a .NET 8.<br>La bola acelera en cada nivel. No la dejes caer.</p><button id="btn">JUGAR</button></div>
+</div>
+<p class="keys">Controles: ← → / A D · ratón · táctil &nbsp;|&nbsp; Espacio = lanzar / pausar</p>
+<script>
+"use strict";
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const W=cv.width,H=cv.height;
+const elS=document.getElementById('score'),elL=document.getElementById('level'),elV=document.getElementById('lives');
+const ov=document.getElementById('overlay'),ovT=document.getElementById('ovTitle'),ovX=document.getElementById('ovText'),btn=document.getElementById('btn');
+const TECHS=["C#","VB","FW4.7","SQL","REST","ODBC","SP","ERP",".NET8","WinForms","API","T-SQL"];
+const COLORS=["#512BD4","#38bdf8","#7c3aed","#22d3ee","#a78bfa","#60a5fa"];
+let paddle,ball,bricks,score,level,lives,running,paused,raf;
+function buildLevel(lv){
+  bricks=[];const rows=4+Math.min(lv,4),cols=8,gap=6,top=70,side=16;
+  const bw=(W-side*2-gap*(cols-1))/cols,bh=26;
+  for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
+    const hp=r===0?2:1;
+    bricks.push({x:side+c*(bw+gap),y:top+r*(bh+gap),w:bw,h:bh,hp,max:hp,
+      label:TECHS[(r*cols+c)%TECHS.length],color:COLORS[(r+c)%COLORS.length]});
+  }
+}
+function resetPositions(){
+  paddle={w:Math.max(64,96-level*6),h:12,x:W/2-48,y:H-40,speed:7};
+  ball={x:W/2,y:paddle.y-10,r:7,dx:3.2+level*0.4,dy:-(3.6+level*0.4),stuck:true};
+}
+function newGame(){score=0;level=1;lives=3;buildLevel(level);resetPositions();sync();hideOv();running=true;paused=false;loop();}
+function nextLevel(){level++;buildLevel(level);resetPositions();sync();}
+function sync(){elS.textContent=score;elL.textContent=level;elV.textContent=lives;}
+function showOv(t,x,b){ovT.textContent=t;ovX.innerHTML=x;btn.textContent=b;ov.classList.remove('hidden');}
+function hideOv(){ov.classList.add('hidden');}
+function loop(){cancelAnimationFrame(raf);raf=requestAnimationFrame(tick);}
+function tick(){
+  if(!running)return;
+  if(!paused)update();
+  draw();
+  raf=requestAnimationFrame(tick);
+}
+function update(){
+  if(left)paddle.x-=paddle.speed;
+  if(right)paddle.x+=paddle.speed;
+  paddle.x=Math.max(4,Math.min(W-paddle.w-4,paddle.x));
+  if(ball.stuck){ball.x=paddle.x+paddle.w/2;ball.y=paddle.y-ball.r-1;return;}
+  ball.x+=ball.dx;ball.y+=ball.dy;
+  if(ball.x<ball.r){ball.x=ball.r;ball.dx*=-1;}
+  if(ball.x>W-ball.r){ball.x=W-ball.r;ball.dx*=-1;}
+  if(ball.y<ball.r){ball.y=ball.r;ball.dy*=-1;}
+  // paddle
+  if(ball.dy>0&&ball.y+ball.r>=paddle.y&&ball.y+ball.r<=paddle.y+paddle.h+8&&ball.x>=paddle.x-ball.r&&ball.x<=paddle.x+paddle.w+ball.r){
+    const rel=(ball.x-(paddle.x+paddle.w/2))/(paddle.w/2);
+    const sp=Math.min(7,Math.hypot(ball.dx,ball.dy)*1.015);
+    ball.dx=rel*sp;ball.dy=-Math.sqrt(Math.max(1,sp*sp-ball.dx*ball.dx));
+    ball.y=paddle.y-ball.r-1;
+  }
+  // bricks
+  for(const b of bricks){
+    if(b.hp<=0)continue;
+    if(ball.x+ball.r>b.x&&ball.x-ball.r<b.x+b.w&&ball.y+ball.r>b.y&&ball.y-ball.r<b.y+b.h){
+      b.hp--;score+=b.max===2&&b.hp===1?50:100;
+      // rebote según lado
+      const oxL=ball.x+ball.r-b.x,oxR=b.x+b.w-(ball.x-ball.r),oyT=ball.y+ball.r-b.y,oyB=b.y+b.h-(ball.y-ball.r);
+      const m=Math.min(oxL,oxR,oyT,oyB);
+      if(m===oxL||m===oxR)ball.dx*=-1;else ball.dy*=-1;
+      sync();break;
+    }
+  }
+  if(bricks.every(b=>b.hp<=0)){nextLevel();showToast("¡Nivel "+level+"! Migración progresiva ✅");}
+  if(ball.y>H+20){lives--;sync();
+    if(lives<=0){running=false;showOv("💀 GAME OVER","Score: <b>"+score+"</b> · Nivel "+level+"<br>La deuda técnica te ha absorbido. ¡Reinténtalo!","REINTENTAR");}
+    else{ball.stuck=true;ball.x=paddle.x+paddle.w/2;ball.y=paddle.y-11;ball.dx=3.2+level*0.4;ball.dy=-(3.6+level*0.4);}
+  }
+}
+let toastUntil=0,toastMsg="";
+function showToast(m){toastMsg=m;toastUntil=performance.now()+1600;}
+function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  // fondo rejilla sutil
+  ctx.strokeStyle="#16233f";ctx.lineWidth=1;
+  for(let x=0;x<=W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  // bricks
+  ctx.textAlign="center";ctx.textBaseline="middle";
+  for(const b of bricks){
+    if(b.hp<=0)continue;
+    ctx.globalAlpha=b.hp<b.max?0.55:1;
+    rr(b.x,b.y,b.w,b.h,6);ctx.fillStyle=b.color;ctx.fill();
+    ctx.fillStyle="#0a1122";ctx.font="bold 11px Consolas,monospace";
+    ctx.fillText(b.label,b.x+b.w/2,b.y+b.h/2+1);
+    ctx.globalAlpha=1;
+  }
+  // paddle
+  const g=ctx.createLinearGradient(paddle.x,0,paddle.x+paddle.w,0);
+  g.addColorStop(0,"#512BD4");g.addColorStop(1,"#38bdf8");
+  rr(paddle.x,paddle.y,paddle.w,paddle.h,6);ctx.fillStyle=g;ctx.fill();
+  // ball
+  ctx.beginPath();ctx.arc(ball.x,ball.y,ball.r,0,7);ctx.fillStyle="#fff";ctx.shadowColor="#38bdf8";ctx.shadowBlur=12;ctx.fill();ctx.shadowBlur=0;
+  if(ball.stuck&&running&&!paused){ctx.fillStyle="#8b98ad";ctx.font="12px Consolas";ctx.fillText("ESPACIO / TOCA PARA LANZAR",W/2,H-90);}
+  if(toastUntil>performance.now()){ctx.fillStyle="#38bdf8";ctx.font="bold 14px Consolas";ctx.fillText(toastMsg,W/2,52);}
+}
+let left=false,right=false;
+addEventListener("keydown",e=>{
+  if(e.key==="ArrowLeft"||e.key==="a"||e.key==="A")left=true;
+  if(e.key==="ArrowRight"||e.key==="d"||e.key==="D")right=true;
+  if(e.code==="Space"){e.preventDefault();press();}
+});
+addEventListener("keyup",e=>{
+  if(e.key==="ArrowLeft"||e.key==="a"||e.key==="A")left=false;
+  if(e.key==="ArrowRight"||e.key==="d"||e.key==="D")right=false;
+});
+function press(){
+  if(!ov.classList.contains("hidden")){newGame();return;}
+  if(!running){newGame();return;}
+  if(ball.stuck)ball.stuck=false;else paused=!paused;
+}
+btn.onclick=press;
+ov.onclick=e=>{if(e.target!==btn)press();};
+// ratón + táctil
+function toX(clientX){const r=cv.getBoundingClientRect();return (clientX-r.left)/r.width*W;}
+let dragging=false;
+cv.addEventListener("mousemove",e=>{paddle.x=toX(e.clientX)-paddle.w/2;paddle.x=Math.max(4,Math.min(W-paddle.w-4,paddle.x));});
+cv.addEventListener("mousedown",()=>{if(ball.stuck)ball.stuck=false;});
+cv.addEventListener("touchstart",e=>{dragging=true;const t=e.touches[0];paddle.x=toX(t.clientX)-paddle.w/2;if(ball.stuck)ball.stuck=false;},{passive:true});
+cv.addEventListener("touchmove",e=>{if(!dragging)return;const t=e.touches[0];paddle.x=toX(t.clientX)-paddle.w/2;paddle.x=Math.max(4,Math.min(W-paddle.w-4,paddle.x));e.preventDefault();},{passive:false});
+cv.addEventListener("touchend",()=>dragging=false);
+buildLevel(1);resetPositions();score=0;level=1;lives=3;sync();draw();
+</script>
+</body>
+</html>

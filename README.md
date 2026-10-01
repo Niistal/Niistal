@@ -143,8 +143,32 @@ My style: **pragmatic, not hype-driven.** Keep what works, improve what adds val
 </p>
 
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="quote" width="80%"/>
+  <img src="https://raw.githubusercontent.com/Niistal/Niistal/main/assets/nistal-invaders-preview.gif" alt="Nistal Invaders gameplay" width="70%"/>
 </p>
+
+## 🎮 Playable Lab — Nistal Breakout
+
+<p align="center">
+  <a href="https://niistal.github.io/Niistal/game/"><img src="https://img.shields.io/badge/▶_PLAY_NOW-Arkanoid_Breakout-38bdf8?style=for-the-badge&logo=gamepad&logoColor=white&labelColor=0f172a"/></a>
+  <img src="https://img.shields.io/badge/Keyboard_Mouse_Touch-Supported-0f172a?style=for-the-badge&logoColor=38bdf8"/>
+</p>
+
+> Ese widget de `quotes-github-readme` fallaba por camo (servicio caído) y no aportaba nada. Lo he cambiado por algo que engancha: **tu propio juego**.
+>
+> - 🎬 Arriba: gameplay real de tu **NistalInvaders en Unity** (GIF de tu vídeo de 23s).
+> - 🧱 Debajo: **Arkanoid jugable en el navegador** `game/index.html` — rompes bloques `C# / VB / SQL / ERP` para migrar a `.NET 8`. Funciona con teclado, ratón y táctil.
+> - 📹 Vídeo completo en [`assets/nistal-invaders.mp4`](assets/nistal-invaders.mp4).
+
+<details>
+<summary><b>🕹️ Cómo jugar / How to play</b></summary>
+<br>
+
+- ⬅️ ⬆️ / A D, ratón o dedo para mover la pala
+- Espacio / click / toque para lanzar y pausar
+- Cada nivel la bola va más rápido. 3 vidas. Puntos extra en bloques duros.
+- URL directa cuando actives Pages: `https://niistal.github.io/Niistal/game/`
+
+</details>
 
 ---
 
