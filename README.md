@@ -3,7 +3,7 @@
 
 <!-- TYPING -->
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=21&pause=1100&color=58A6FF&center=true&vCenter=true&width=760&lines=Full+Stack+Software+Developer+%F0%9F%9A%80;Strong+in+Backend+%2B+.NET+%2B+SQL+Server+%7C+C%23+%7C+VB.NET;DB+-+Backend+-+API+-+Frontend+%2F+Desktop+%2F+Mobile;ERP+%40+GIP-Citrino+%2B+Industrial+SW+for+SITAB;Secure+by+Design+%E2%80%A2+AI+%2B+Big+Data+for+real+ERP" alt="Typing SVG" /></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=21&pause=1100&color=58A6FF&center=true&vCenter=true&width=760&lines=Full+Stack+Software+Developer+%F0%9F%9A%80;Strong+in+Backend+%2B+.NET+%2B+SQL+Server+%7C+C%23+%7C+VB.NET;DB+-+Backend+-+API+-+Frontend+%2F+Desktop+%2F+Mobile;ERP+%40+SITAB+Group+%28GIP%29+-+Citrino+%2B+Industrial+SW;Secure+by+Design+%E2%80%A2+AI+%2B+Big+Data+for+real+ERP" alt="Typing SVG" /></a>
 </p>
 
 <!-- BADGES TOP -->
@@ -15,7 +15,7 @@
   <img src="https://komarev.com/ghpvc/?username=Niistal&style=for-the-badge&color=0f172a" alt="views"/>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/GIP-Gestion_Integral_de_Procesos-0f172a?style=flat-square&logo=briefcase&logoColor=38bdf8"/>
+  <img src="https://img.shields.io/badge/SITAB_Group-GIP_Software_Division-0f172a?style=flat-square&logo=briefcase&logoColor=38bdf8"/>
   <img src="https://img.shields.io/badge/.NET_8-512BD4?style=flat-square&logo=dotnet&logoColor=white"/>
   <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white"/>
   <img src="https://img.shields.io/badge/Cybersecurity-OWASP-000000?style=flat-square&logo=owasp&logoColor=white"/>
@@ -25,22 +25,26 @@
 
 ---
 
-## 🧑‍💻 About Me — Full Stack
+## 🧑‍💻 About Me / Sobre mí — Full Stack
 
 <img align="right" width="280" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="coding"/>
 
-**Full Stack Software Developer** with a strong base in enterprise software, Microsoft ecosystem, .NET, databases and management apps — **not only web, not only .NET.**
+**EN — Full Stack Software Developer** with a strong base in enterprise software, Microsoft ecosystem, .NET, databases and management apps — **not only web, not only .NET.** End-to-end: **Database → Backend → Business Logic → API → Frontend/Desktop/Mobile → Integrations → Infra → Security → Observability.** Strongest today in enterprise apps, .NET, SQL Server, business logic and backend architecture, with real experience in frontend, Android, web, desktop and complete systems.
 
-I work end-to-end: **Database → Backend → Business Logic → API → Frontend/Desktop/Mobile → Integrations → Infra → Security → Observability.** Main strength today: enterprise apps, .NET, SQL Server, business logic and backend architecture — with real experience in frontend, Android, web, desktop and complete systems.
+**ES — Full Stack Developer** con base fuerte en software empresarial, ecosistema Microsoft, .NET, bases de datos y aplicaciones de gestión — **no solo web, no solo .NET.** Trabajo de extremo a extremo: **base de datos → backend → lógica de negocio → API → frontend/desktop/móvil → integraciones → infra → seguridad → observabilidad.** Mi fortaleza hoy: aplicaciones empresariales, .NET, SQL Server, lógica de negocio y arquitectura backend, con experiencia real en frontend, Android, web, desktop y sistemas completos.
 
-Currently **@ GIP (Gestión Integral de Procesos)**, building **Citrino** ([citrino.solutions](https://citrino.solutions/)): platform to digitalize sales, purchasing, production, logistics, finance, HR, quality — plus industrial software for **SITAB** ([sitab.es](https://sitab.es/), office partition systems). Real ERP data: orders, production, docs, workers, suppliers, customers, logistics.
+**EN — Currently @ SITAB Group, in GIP (Gestión Integral de Procesos), the software division — same group in practice.** GIP builds **Citrino** ([citrino.solutions](https://citrino.solutions/)): platform to digitalize sales, purchasing, production, logistics, finance, HR and quality. I also work on industrial software for **SITAB** ([sitab.es](https://sitab.es/), office partition systems). Real ERP data: orders, production, docs, workers, suppliers, customers, logistics.
 
-Style: **pragmatic.** Keep what works, improve what adds value, migrate legacy gradually only with clear technical/business advantage. Same for AI: only where it measurably beats a traditional solution.
+**ES — Actualmente en el grupo SITAB, en GIP (Gestión Integral de Procesos), la división de software — en la práctica el mismo grupo.** GIP desarrolla **Citrino** ([citrino.solutions](https://citrino.solutions/)): plataforma para digitalizar ventas, compras, producción, logística, finanzas, RRHH y calidad. También trabajo en software industrial para **SITAB** ([sitab.es](https://sitab.es/), mamparas y división de espacios). Datos ERP reales: pedidos, producción, documentación, trabajadores, proveedores, clientes, logística.
 
-- 🧩 ERP modules, WinForms + ASP.NET Core, REST, integrations, batch processes
-- 🗄️ SQL Server first: T-SQL, stored procedures, ODBC, integrity + traceability
-- 🔧 Legacy (VB.NET / FW 4.7.2–4.8) → keep / refactor / encapsulate / migrate to .NET 8
-- 🔒 Security by design + 📊 AI/Big Data applied to real business data
+**EN — Style: pragmatic.** Keep what works, improve what adds value, migrate legacy gradually only with clear technical/business advantage. Same for AI: only where it measurably beats a traditional solution.
+
+**ES — Estilo: pragmático.** Mantener lo que funciona, mejorar lo que aporta valor, migrar legacy poco a poco solo con ventaja técnica o de negocio clara. Lo mismo con IA: solo donde supere de forma medible a una solución tradicional.
+
+- 🧩 EN: ERP modules, WinForms + ASP.NET Core, REST, integrations, batch · ES: módulos ERP, WinForms + ASP.NET Core, REST, integraciones, batch
+- 🗄️ EN: SQL Server first (T-SQL, procedures, ODBC, integrity + traceability) · ES: SQL Server primero (T-SQL, procedimientos, ODBC, integridad + trazabilidad)
+- 🔧 EN: Legacy (VB.NET / FW 4.7.2–4.8) → keep / refactor / encapsulate / migrate to .NET 8 · ES: Legacy → mantener / refactorizar / encapsular / migrar a .NET 8
+- 🔒 EN: Security by design + AI/Big Data on real business data · ES: Seguridad por diseño + IA/Big Data sobre datos reales
 
 <br clear="right"/>
 
@@ -121,24 +125,21 @@ Style: **pragmatic.** Keep what works, improve what adds value, migrate legacy g
 
 | Where | What | Stack |
 |---|---|---|
-| **[Citrino — GIP](https://citrino.solutions/)** | Enterprise platform: sales, purchasing, production, logistics, finance, HR, quality | C#, VB.NET, .NET 8 / FW 4.7.2–4.8, ASP.NET Core, WinForms, SQL Server, REST |
-| **[SITAB](https://sitab.es/)** | Industrial software: space-division / office partitions, orders, production, logistics | .NET, SQL Server, integrations, business logic |
+| **[Citrino — SITAB Group / GIP](https://citrino.solutions/)** | Enterprise platform by the software division (same group): sales, purchasing, production, logistics, finance, HR, quality | C#, VB.NET, .NET 8 / FW 4.7.2–4.8, ASP.NET Core, WinForms, SQL Server, REST |
+| **[SITAB](https://sitab.es/)** | Parent industrial company: space-division / office partitions, orders, production, logistics | .NET, SQL Server, integrations, business logic |
 | **TerminalAI** `private` | Agentic platform: local-first + security-first, Zero Trust LLM, default-deny, audit, sandboxing | Rust, Python, SQLite, Docker, MCP/ACP, evals |
 | **cnc-guard** `private → make public` | Predictive maintenance: no-leakage validation, F2 threshold, Streamlit + SQLite | Python, sklearn, Streamlit, AI4I DOI |
 | **NistalInvaders** | Full Unity game in C# (levels, enemies, boss, audio, UI) — see gameplay below | C#, Unity |
 
-> Citrino/SITAB code is private (real customer systems). Public repos are my lab for architecture, DevSecOps, data and AI.
+> EN: Citrino/SITAB code is private (real systems of the same group). Public repos are my lab for architecture, DevSecOps, data and AI.
+> ES: El código de Citrino/SITAB es privado (sistemas reales del mismo grupo). Los repos públicos son mi laboratorio de arquitectura, DevSecOps, datos e IA.
 
 ---
 
 ## 📊 Stats
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Niistal&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&row=1" alt="trophies"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Niistal&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" width="100%" alt="activity"/>
+  <img src="https://ghchart.rshah.org/tokyonight/Niistal" width="100%" alt="contribution chart"/>
 </p>
 
 <p align="center">
