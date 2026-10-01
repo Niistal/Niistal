@@ -36,8 +36,8 @@ Security by design, pragmatic architecture, progressive modernization.
 | **[Enterprise Software](https://github.com/Niistal/Enterprise-Software-Showcase)** | Industrial ERP architecture & progressive modernization (WinForms / VB.NET → ASP.NET Core .NET 8) | `C#` `VB.NET` `.NET 8` `SQL Server` `T-SQL` `ODBC` | Transactional data consistency, stored procedures, multi-tenant ERP |
 | **[CNC Guard](https://github.com/Niistal/cnc-guard)** | Industrial predictive maintenance ML with strict zero-leakage validation & threshold tuning | `Python` `scikit-learn` `FastAPI` `Streamlit` `SQLite` | AI4I telemetry, anomaly detection, isolated temporal splits |
 | **[twoSIX](https://github.com/Niistal/twoSIX-Showcase)** | Mobile-first social platform prototype with modular backend and end-to-end type safety | `React Native` `Expo` `TypeScript` `NestJS` `Prisma` `PostgreSQL` | Multi-feed algorithms, optimistic UI, JWT auth, content moderation |
-| **[NistalInvaders](https://github.com/Niistal/NistalInvaders)** | 2D arcade space shooter engine with modular boss state machine & custom AudioMixer | `C#` `Unity 2022` `AudioMixer` `HLSL` | Game loop architecture, dynamic difficulty, Windows installer |
-| **[Hacking Ético](https://github.com/Niistal/hacking-etiko)** | Authorized DevSecOps and vulnerability assessment lab in containerized Kali Linux | `Docker` `Kali Linux` `Python` `Bash` `OWASP` | Multi-stage pentesting, automated audit, vulnerability remediation |
+| **[NistalInvaders](https://github.com/Niistal/NistalInvaders-Showcase)** | 2D arcade space shooter engine with modular boss state machine & custom AudioMixer | `C#` `Unity 2022` `AudioMixer` `HLSL` | Game loop architecture, dynamic difficulty, Windows installer |
+| **[HardenSecurity](https://github.com/Niistal/hardensecurity)** | Windows security posture audit & hardening automation with non-destructive verification | `PowerShell` `Windows 11` `AuditOnly` `DevSecOps` | CIS baseline alignment, UAC auditing, telemetry restriction |
 
 ---
 
