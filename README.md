@@ -86,7 +86,7 @@
 ## 📫 Contact / Contacto
 
 - GitHub: [@Niistal](https://github.com/Niistal)
-- Email: nistal.iker@uni.eus
+- Email: ikernistal77@gmail.com
 - Location: Euskadi, Spain / Euskadi, España
 - Currently: open to internships, collaborations and junior roles / abierto a prácticas, colaboraciones y roles junior
 
