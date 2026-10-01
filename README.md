@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7A1F3D,100:6D28D9&height=190&section=header&text=Iker+Nistal&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=Full+Stack+Software+Developer&descAlignY=62"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7A1F3D,100:6D28D9&height=190&section=header&text=Niistal&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=Full+Stack+Software+Developer&descAlignY=62"/>
 
 <!-- TYPING -->
 <p align="center">
