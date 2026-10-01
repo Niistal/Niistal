@@ -28,14 +28,16 @@ Security by design, pragmatic architecture, progressive modernization.
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Featured Projects & Technical Showcases
 
-| Project | What | Stack | Status |
+| Project / Showcase | Engineering Focus | Stack | Architecture & Scope |
 |---|---|---|---|
-| **Enterprise Software @ GIP — [Citrino](https://citrino.solutions/)** | ERP platform: sales, purchasing, production, logistics, finance, HR, quality + industrial software used by [SITAB](https://sitab.es/) | `C#` `VB.NET` `.NET 8 / FW 4.7.2+` `SQL Server` `REST` | `Private` |
-| **CNC Guard** | Industrial predictive maintenance: no-leakage validation, threshold tuning, anomaly detection | `Python` `scikit-learn` `FastAPI` `Streamlit` `SQLite` | `To be published` |
-| **TerminalAI** | Private agentic engineering platform: local-first, Zero Trust LLM, default-deny, sandboxing, audit | `Rust` `Python` `MCP` `ACP` `SQLite` `Docker` | `Private` |
-| **NistalInvaders** | Full Unity game in C# — levels, enemies, final boss, audio, UI, score. Gameplay in the lab below ⬇️ | `C#` `Unity` | `Gameplay below` |
+| **[TerminalAI](https://github.com/Niistal/TerminalAI-Showcase)** | Local-first agentic engineering platform with Zero-Trust LLM broker, sandboxing & capability controls | `Rust` `Python` `MCP` `ACP` `SQLite` `Docker` | Systems architecture, subagent orchestration, AST linting, audit trails |
+| **[Enterprise Software](https://github.com/Niistal/Enterprise-Software-Showcase)** | Industrial ERP architecture & progressive modernization (WinForms / VB.NET → ASP.NET Core .NET 8) | `C#` `VB.NET` `.NET 8` `SQL Server` `T-SQL` `ODBC` | Transactional data consistency, stored procedures, multi-tenant ERP |
+| **[CNC Guard](https://github.com/Niistal/cnc-guard)** | Industrial predictive maintenance ML with strict zero-leakage validation & threshold tuning | `Python` `scikit-learn` `FastAPI` `Streamlit` `SQLite` | AI4I telemetry, anomaly detection, isolated temporal splits |
+| **[twoSIX](https://github.com/Niistal/twoSIX-Showcase)** | Mobile-first social platform prototype with modular backend and end-to-end type safety | `React Native` `Expo` `TypeScript` `NestJS` `Prisma` `PostgreSQL` | Multi-feed algorithms, optimistic UI, JWT auth, content moderation |
+| **[NistalInvaders](https://github.com/Niistal/NistalInvaders)** | 2D arcade space shooter engine with modular boss state machine & custom AudioMixer | `C#` `Unity 2022` `AudioMixer` `HLSL` | Game loop architecture, dynamic difficulty, Windows installer |
+| **[Hacking Ético](https://github.com/Niistal/hacking-etiko)** | Authorized DevSecOps and vulnerability assessment lab in containerized Kali Linux | `Docker` `Kali Linux` `Python` `Bash` `OWASP` | Multi-stage pentesting, automated audit, vulnerability remediation |
 
 ---
 
@@ -154,7 +156,6 @@ Gameplay real de **NistalInvaders** (Unity + C#):
 
 <p align="center">
   <a href="https://github.com/Niistal"><img src="https://img.shields.io/badge/GitHub-Niistal-18181B?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="[ADD LINKEDIN URL]"><img src="https://img.shields.io/badge/LinkedIn-Connect-7A1F3D?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="mailto:ikernistal77@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-991B3D?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://citrino.solutions/"><img src="https://img.shields.io/badge/Citrino-citrino.solutions-18181B?style=for-the-badge&logo=dotnet&logoColor=white"/></a>
 </p>
