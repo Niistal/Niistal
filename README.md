@@ -58,20 +58,17 @@
 
 ---
 
-## 📌 Featured Projects / Proyectos destacados
+## 🎯 Focus / Foco actual
 
-> I'm making these public step by step. / Estoy haciéndolos públicos poco a poco.
+**EN:**
+- Big Data pipelines with Python, Jupyter and PySpark
+- Backend fundamentals: Java, REST APIs, testing
+- Systems and automation: Rust, Linux, Docker, CI
 
-| Project | Stack | What is it? / ¿Qué es? |
-|---------|-------|------------------------|
-| [moviesRestApi](https://github.com/Niistal/moviesRestApi) | Java, REST | Movie REST API — data access project / API REST de películas |
-| [erronkaAplikazioa](https://github.com/Niistal/erronkaAplikazioa) | Kotlin, Android | Secure production app for Uni Eibar-Ermua / App Android para reto uni |
-| [Sitab_WhatsApp_Bot](https://github.com/Niistal/Sitab_WhatsApp_Bot) | JavaScript | WhatsApp automation bot / Bot de automatización |
-| [niistal_optimizer](https://github.com/Niistal/niistal_optimizer) | PowerShell | Windows optimizer scripts / Scripts de optimización |
-| [Big_Data](https://github.com/Niistal/Big_Data) | Jupyter, Python | Data pipelines and analysis / Pipelines y análisis de datos |
-| [dotfiles](https://github.com/Niistal/dotfiles) | Shell, Linux | My dev environment / Mi entorno de desarrollo |
-
-*Private R&D: `TerminalAI` (Rust + Python agentic platform) stays private for now.*
+**ES:**
+- Pipelines Big Data con Python, Jupyter y PySpark
+- Fundamentos backend: Java, APIs REST, testing
+- Sistemas y automatización: Rust, Linux, Docker, CI
 
 ---
 
