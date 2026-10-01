@@ -119,7 +119,7 @@ Security by design, pragmatic architecture, progressive modernization.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Niistal/Niistal/output/github-contribution-grid-snake.svg" alt="snake"/>
+  <img src="https://raw.githubusercontent.com/Niistal/Niistal/output/github-contribution-grid-snake.svg?v=2" alt="snake"/>
 </p>
 
 ---
