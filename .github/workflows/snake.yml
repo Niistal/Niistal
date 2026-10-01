@@ -15,7 +15,7 @@ jobs:
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Niistal
-          outputs: dist/github-contribution-grid-snake.svg
+          outputs: dist/github-contribution-grid-snake.svg?color_snake=#E879F9&color_dots=#202027,#7A1F3D,#B83258,#D65A7A,#F5BCC9
       - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
