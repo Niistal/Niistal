@@ -5,24 +5,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Nistal Breakout — revienta la deuda técnica</title>
 <style>
-  :root{--bg:#0f172a;--panel:#111c33;--cyan:#38bdf8;--violet:#512BD4;--txt:#e6edf3;--mut:#8b98ad}
+  :root{--bg:#09090B;--bg2:#0F0F13;--surface:#141419;--surface2:#19191F;--txt:#F4F4F5;--mut:#A1A1AA;--border:#29292F;--brand:#D65A7A;--brand2:#A78BFA;--blue:#60A5FA;--fuchsia:#E879F9;--canvas:#0F0F13;--grid:#222228;--ball:#FFFFFF;--brick-txt:#09090B;--shadow:0 0 40px #D65A7A44}
+  @media (prefers-color-scheme: light){:root{--bg:#F8F9FC;--bg2:#F3F4F8;--surface:#FFFFFF;--surface2:#FAFAFC;--txt:#18181B;--mut:#52525B;--border:#E4E4E7;--brand:#7A1F3D;--brand2:#6D28D9;--blue:#2563EB;--fuchsia:#C026D3;--canvas:#FFFFFF;--grid:#ECECF0;--ball:#7A1F3D;--brick-txt:#FFFFFF;--shadow:0 8px 30px #7A1F3D22}}
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  body{margin:0;background:radial-gradient(1000px 500px at 50% -10%,#1b2a4d 0%,var(--bg) 60%);color:var(--txt);font-family:Consolas,Menlo,monospace;display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:16px}
+  body{margin:0;background:var(--bg2);color:var(--txt);font-family:Consolas,Menlo,monospace;display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:16px}
   h1{font-size:20px;margin:8px 0 2px;letter-spacing:.5px}
-  h1 span{color:var(--cyan)}
+  h1 span{background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
   p.sub{margin:0 0 10px;color:var(--mut);font-size:13px;text-align:center;max-width:520px}
   #wrap{position:relative;width:min(480px,94vw)}
-  canvas{width:100%;height:auto;display:block;background:#0a1122;border:2px solid #22345c;border-radius:12px;box-shadow:0 0 40px #512BD455;touch-action:none}
+  canvas{width:100%;height:auto;display:block;background:var(--canvas);border:2px solid var(--border);border-radius:12px;box-shadow:var(--shadow);touch-action:none}
   #hud{display:flex;gap:8px;justify-content:space-between;margin:10px 0;font-size:13px;color:var(--mut)}
   #hud b{color:var(--txt)}
-  #overlay{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;background:#0a1122d9;border-radius:12px;text-align:center;padding:20px}
+  #overlay{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;background:var(--canvas);background:color-mix(in srgb,var(--canvas) 86%,transparent);border:2px solid var(--border);border-radius:12px;text-align:center;padding:20px}
   #overlay.hidden{display:none}
-  #overlay h2{margin:0;color:var(--cyan);font-size:22px}
+  #overlay h2{margin:0;color:var(--brand);font-size:22px}
   #overlay p{margin:0;color:var(--mut);font-size:13px;max-width:380px}
-  button{background:linear-gradient(90deg,var(--violet),var(--cyan));border:0;color:#fff;font:700 15px Consolas,monospace;padding:12px 26px;border-radius:999px;cursor:pointer}
+  button{background:linear-gradient(135deg,var(--brand),var(--brand2));border:0;color:#fff;font:700 15px Consolas,monospace;padding:12px 26px;border-radius:999px;cursor:pointer}
+  button:hover{filter:brightness(1.1)}
   button:active{transform:scale(.96)}
   .keys{font-size:12px;color:var(--mut);margin-top:10px;text-align:center}
-  a{color:var(--cyan)}
+  a{color:var(--blue)}
 </style>
 </head>
 <body>
@@ -41,14 +43,21 @@ const W=cv.width,H=cv.height;
 const elS=document.getElementById('score'),elL=document.getElementById('level'),elV=document.getElementById('lives');
 const ov=document.getElementById('overlay'),ovT=document.getElementById('ovTitle'),ovX=document.getElementById('ovText'),btn=document.getElementById('btn');
 const TECHS=["C#","VB","FW4.7","SQL","REST","ODBC","SP","ERP",".NET8","WinForms","API","T-SQL"];
-const COLORS=["#512BD4","#38bdf8","#7c3aed","#22d3ee","#a78bfa","#60a5fa"];
+// Orden visualización datos: burdenos -> morado -> azul -> fucsia -> rosa -> cian
+const PALETTES={dark:{bricks:["#D65A7A","#A78BFA","#60A5FA","#E879F9","#FB7185","#22D3EE"],grid:"#222228",paddle:["#D65A7A","#A78BFA"],ball:"#FFFFFF",glow:"#E879F9",muted:"#A1A1AA",brickTxt:"#09090B"},
+light:{bricks:["#7A1F3D","#6D28D9","#2563EB","#C026D3","#E11D48","#0891B2"],grid:"#ECECF0",paddle:["#7A1F3D","#6D28D9"],ball:"#7A1F3D",glow:"#C026D3",muted:"#52525B",brickTxt:"#FFFFFF"}};
+const mq=matchMedia("(prefers-color-scheme: light)");
+function pal(){return mq.matches?PALETTES.light:PALETTES.dark;}
+mq.addEventListener?.("change",()=>{recolorBricks();draw();});
+function recolorBricks(){const B=pal().bricks;if(!bricks)return;for(const b of bricks)b.color=B[b.ci%B.length];}
+const COLORS=pal().bricks;
 let paddle,ball,bricks,score,level,lives,running,paused,raf;
 function buildLevel(lv){
   bricks=[];const rows=4+Math.min(lv,4),cols=8,gap=6,top=70,side=16;
   const bw=(W-side*2-gap*(cols-1))/cols,bh=26;
   for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
     const hp=r===0?2:1;
-    bricks.push({x:side+c*(bw+gap),y:top+r*(bh+gap),w:bw,h:bh,hp,max:hp,
+    bricks.push({x:side+c*(bw+gap),y:top+r*(bh+gap),w:bw,h:bh,hp,max:hp,ci:(r+c),
       label:TECHS[(r*cols+c)%TECHS.length],color:COLORS[(r+c)%COLORS.length]});
   }
 }
@@ -106,9 +115,10 @@ let toastUntil=0,toastMsg="";
 function showToast(m){toastMsg=m;toastUntil=performance.now()+1600;}
 function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
 function draw(){
+  const P=pal();
   ctx.clearRect(0,0,W,H);
   // fondo rejilla sutil
-  ctx.strokeStyle="#16233f";ctx.lineWidth=1;
+  ctx.strokeStyle=P.grid;ctx.lineWidth=1;
   for(let x=0;x<=W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
   // bricks
   ctx.textAlign="center";ctx.textBaseline="middle";
@@ -116,18 +126,18 @@ function draw(){
     if(b.hp<=0)continue;
     ctx.globalAlpha=b.hp<b.max?0.55:1;
     rr(b.x,b.y,b.w,b.h,6);ctx.fillStyle=b.color;ctx.fill();
-    ctx.fillStyle="#0a1122";ctx.font="bold 11px Consolas,monospace";
+    ctx.fillStyle=P.brickTxt;ctx.font="bold 11px Consolas,monospace";
     ctx.fillText(b.label,b.x+b.w/2,b.y+b.h/2+1);
     ctx.globalAlpha=1;
   }
-  // paddle
+  // paddle (gradiente marca burdenos -> morado)
   const g=ctx.createLinearGradient(paddle.x,0,paddle.x+paddle.w,0);
-  g.addColorStop(0,"#512BD4");g.addColorStop(1,"#38bdf8");
+  g.addColorStop(0,P.paddle[0]);g.addColorStop(1,P.paddle[1]);
   rr(paddle.x,paddle.y,paddle.w,paddle.h,6);ctx.fillStyle=g;ctx.fill();
   // ball
-  ctx.beginPath();ctx.arc(ball.x,ball.y,ball.r,0,7);ctx.fillStyle="#fff";ctx.shadowColor="#38bdf8";ctx.shadowBlur=12;ctx.fill();ctx.shadowBlur=0;
-  if(ball.stuck&&running&&!paused){ctx.fillStyle="#8b98ad";ctx.font="12px Consolas";ctx.fillText("ESPACIO / TOCA PARA LANZAR",W/2,H-90);}
-  if(toastUntil>performance.now()){ctx.fillStyle="#38bdf8";ctx.font="bold 14px Consolas";ctx.fillText(toastMsg,W/2,52);}
+  ctx.beginPath();ctx.arc(ball.x,ball.y,ball.r,0,7);ctx.fillStyle=P.ball;ctx.shadowColor=P.glow;ctx.shadowBlur=12;ctx.fill();ctx.shadowBlur=0;
+  if(ball.stuck&&running&&!paused){ctx.fillStyle=P.muted;ctx.font="12px Consolas";ctx.fillText("ESPACIO / TOCA PARA LANZAR",W/2,H-90);}
+  if(toastUntil>performance.now()){ctx.fillStyle=P.paddle[0];ctx.font="bold 14px Consolas";ctx.fillText(toastMsg,W/2,52);}
 }
 let left=false,right=false;
 addEventListener("keydown",e=>{
