@@ -1,95 +1,97 @@
-# Hi there, I'm Iker Nistal Fernandez 👋
+<!-- HEADER ANIMADO -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:38bdf8&height=180&section=header&text=Iker%20Nistal%20Fernandez&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%E2%80%A2%20Big%20Data%20%E2%80%A2%20Rust%20%E2%80%A2%20Kotlin&descAlignY=62&descSize=18"/>
 
-### Hola, soy Iker Nistal — Full-Stack Developer en formación
+<!-- TYPING ANIMADO -->
+<p align="center">
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=650&lines=Computer+Engineering+Student+%F0%9F%8E%93;Backend+in+Java+%2F+Python+%E2%9A%99%EF%B8%8F;Mobile+in+Kotlin+%F0%9F%93%B1;Systems+%2B+Tooling+in+Rust+%F0%9F%A6%80;Big+Data+%2B+PySpark+%F0%9F%93%8A" alt="Typing SVG" /></a>
+</p>
 
-> **EN:** Computer Engineering student from Euskadi, Spain. I build backends in Java/Python, mobile apps in Kotlin, and systems/tooling in Rust. Currently focused on **Big Data** and **TerminalAI**.
->
-> **ES:** Estudiante de ingeniería informática de Euskadi. Desarrollo backends en Java/Python, apps móviles en Kotlin y sistemas/tooling en Rust. Actualmente enfocado en **Big Data** y **TerminalAI**.
-
-[![Followers](https://img.shields.io/github/followers/Niistal?style=flat&logo=github)](https://github.com/Niistal?tab=followers)
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white)
+<!-- BADGES -->
+<p align="center">
+  <a href="https://github.com/Niistal?tab=followers"><img src="https://img.shields.io/github/followers/Niistal?style=for-the-badge&logo=github&logoColor=white&labelColor=0f172a&color=38bdf8" alt="followers"/></a>
+  <img src="https://komarev.com/ghpvc/?username=Niistal&style=for-the-badge&color=0f172a" alt="views" />
+  <img src="https://img.shields.io/badge/OPEN_TO-Internships_%7C_Junior_Roles-38bdf8?style=for-the-badge&labelColor=0f172a" alt="hireable"/>
+  <img src="https://img.shields.io/badge/EUSKADI-Spain-0f172a?style=for-the-badge&logo=googlemaps&logoColor=38bdf8" alt="location"/>
+</p>
 
 ---
 
-## 🚀 About Me / Sobre mí
+## 🚀 About Me
 
-**EN:**
-- Computer Engineering student — Uni Eibar-Ermua / Euskadi
-- Generalist: backend, mobile, data, scripting and tooling
-- Working with **Python + Jupyter / PySpark** for data pipelines
-- Building systems in **Rust**, automation in **PowerShell/Bash**
-- Android apps in **Kotlin/Java**, bots and web in **JavaScript**
-- Goal: clean, tested, production-grade code
+<img align="right" width="260" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="coding" />
 
-**ES:**
-- Estudiante de ingeniería informática — Uni Eibar-Ermua / Euskadi
-- Generalista: backend, móvil, datos, scripting y tooling
-- Trabajo con **Python + Jupyter / PySpark** para pipelines de datos
-- Sistemas en **Rust**, automatización en **PowerShell/Bash**
-- Apps Android en **Kotlin/Java**, bots y web en **JavaScript**
-- Objetivo: código limpio, testeado y de calidad producción
+**EN:** Computer Engineering student @ Uni Eibar-Ermua (Euskadi). Generalist: backend, mobile, data & tooling. I build **Java/Python backends, Kotlin apps, Rust systems** and **Big Data pipelines (Jupyter/PySpark)**. Goal: clean, tested, production-grade code.
+
+**ES:** Estudiante de ingeniería informática. Generalista: backend, móvil, datos y sistemas. Enfocado en **Big Data** y **TerminalAI**.
+
+- 🔭 Ahora: pipelines Big Data + REST APIs + Rust/Linux/Docker/CI
+- 🌱 Aprendiendo: testing, PySpark en serio, prod-grade Rust
+- 📫 Abierto a prácticas, colaboraciones y roles junior
+- 📍 Euskadi, Spain
+
+<br clear="right"/>
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Languages:**
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=black)
-![C#](https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white)
-
-**Data / Mobile / Tools:**
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
-![PySpark](https://img.shields.io/badge/PySpark-E25A1C?logo=apachespark&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![VSCode](https://img.shields.io/badge/VSCode-007ACC?logo=visualstudiocode&logoColor=white)
-
----
-
-## 🎯 Focus / Foco actual
-
-**EN:**
-- Big Data pipelines with Python, Jupyter and PySpark
-- Backend fundamentals: Java, REST APIs, testing
-- Systems and automation: Rust, Linux, Docker, CI
-
-**ES:**
-- Pipelines Big Data con Python, Jupyter y PySpark
-- Fundamentos backend: Java, APIs REST, testing
-- Sistemas y automatización: Rust, Linux, Docker, CI
-
----
-
-## 📊 GitHub Stats
-
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" alt="Stats" width="49%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&theme=tokyonight&hide_border=true" alt="Top Langs" width="49%" />
+<p align="center">
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,java,kotlin,rust,js,ts,c,cs,powershell,mongo,postgres,docker,linux,git,githubactions,vscode,androidstudio,idea&theme=dark" alt="skills"/></a>
 </p>
-<p>
-  <img src="https://streak-stats.demolab.com/?user=Niistal&theme=tokyonight&hide_border=true" alt="Streak" width="100%" />
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/PySpark-E25A1C?logo=apachespark&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/SpringBoot-6DB33F?logo=springboot&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white&style=flat-square" />
 </p>
 
 ---
 
-## 📫 Contact / Contacto
+## 🎯 Featured / Destacados
 
-- GitHub: [@Niistal](https://github.com/Niistal)
-- Email: ikernistal77@gmail.com
-- Location: Euskadi, Spain / Euskadi, España
-- Currently: open to internships, collaborations and junior roles / abierto a prácticas, colaboraciones y roles junior
+> Haz estos 3-4 repos públicos y se verán aquí automáticamente. Ahora mismo son privados y nadie los puede abrir.
+
+| Project | Stack | Demuestra | Link |
+|---|---|---|---|
+| **cnc-guard** | Python, sklearn, Streamlit, SQLite | ML validado sin leakage, F2 + threshold, DOI + lineage | `github.com/Niistal/cnc-guard` |
+| **moviesRestApi** | Java Spring Boot, MongoDB, Swagger | REST CRUD + OpenAPI | `github.com/Niistal/moviesRestApi` |
+| **TPV-Program** | JavaFX, PostgreSQL | CRUD + PDF + UML | `github.com/Niistal/TPV-Program` |
+| **Big_Data-portfolio** | Python, Jupyter, PySpark | ETL + EDA + ML (curado, no dump Moodle) | pendiente de crear |
 
 ---
 
-⭐ *Thanks for visiting — Gracias por pasarte por mi perfil!*
+## 📊 Stats Animados
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Niistal&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" width="100%" alt="activity graph"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true" width="49%" alt="stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="49%" alt="langs"/>
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=Niistal&theme=tokyonight&hide_border=true" width="70%" alt="streak"/>
+</p>
+
+<!-- SNAKE ANIMADO: necesita workflow output branch (te lo dejo abajo) -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Niistal/Niistal/output/github-contribution-grid-snake.svg" alt="snake" />
+</p>
+
+---
+
+## 📫 Contact
+
+<p align="center">
+  <a href="https://github.com/Niistal"><img src="https://img.shields.io/badge/GitHub-Niistal-0f172a?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="mailto:ikernistal77@gmail.com"><img src="https://img.shields.io/badge/Gmail-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/"><img src="https://img.shields.io/badge/LinkedIn-Add_yours-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+</p>
+
+<p align="center">⭐ Thanks for visiting — Gracias por pasarte!</p>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:38bdf8,100:0f172a&height=120&section=footer"/>
