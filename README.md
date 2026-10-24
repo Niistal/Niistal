@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/FULL_STACK-Developer-7A1F3D?style=for-the-badge&logo=code&logoColor=white"/>
+  <a href="https://niistal.github.io/"><img src="https://img.shields.io/badge/PORTFOLIO-niistal.github.io-7A1F3D?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=3D0A1D"/></a>
   <a href="https://citrino.solutions/"><img src="https://img.shields.io/badge/CITRINO-Enterprise_Platform-7A1F3D?style=for-the-badge&logo=dotnet&logoColor=white&labelColor=3D0A1D"/></a>
   <a href="https://sitab.es/"><img src="https://img.shields.io/badge/SITAB-Industrial_Software-991B3D?style=for-the-badge&logo=factory&logoColor=white&labelColor=3D0A1D"/></a>
   <a href="https://github.com/Niistal?tab=followers"><img src="https://img.shields.io/github/followers/Niistal?style=for-the-badge&logo=github&logoColor=white&labelColor=3D0A1D&color=7A1F3D"/></a>
@@ -25,6 +25,14 @@ Full Stack Software Developer at **GIP**, building enterprise and industrial sof
 Strong in **C#, VB.NET, .NET 8, .NET Framework and SQL Server**, across backend, desktop, mobile, APIs and databases.
 Currently expanding into **AI, Big Data, Data Engineering and secure agentic systems**.
 Security by design, pragmatic architecture, progressive modernization.
+
+> 🌐 **About me, projects & contact →** [niistal.github.io](https://niistal.github.io/) · 📄 [Download CV](https://niistal.github.io/cv/CV_Iker_Nistal_2026.pdf)
+
+<table align="center"><tr>
+<td align="center">🔨 <b>Now building</b><br/><sub>TerminalAI — Rust control plane + local LLM sandboxing</sub></td>
+<td align="center">📚 <b>Studying</b><br/><sub>Big Data & AI specialization (Kafka · NiFi · PySpark · MLOps)</sub></td>
+<td align="center">🎯 <b>Open to</b><br/><sub>.NET / backend roles · custom software projects</sub></td>
+</tr></table>
 
 ---
 
@@ -116,7 +124,12 @@ Security by design, pragmatic architecture, progressive modernization.
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&bg_color=F8F9FC&title_color=7A1F3D&icon_color=6D28D9&text_color=18181B&border_color=E4E4E7" />
     <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&bg_color=121217&title_color=D65A7A&icon_color=A78BFA&text_color=F4F4F5&border_color=29292F" />
-    <img src="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&bg_color=121217&title_color=D65A7A&icon_color=A78BFA&text_color=F4F4F5&border_color=29292F" width="55%" alt="stats"/>
+    <img src="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&bg_color=121217&title_color=D65A7A&icon_color=A78BFA&text_color=F4F4F5&border_color=29292F" width="49%" alt="stats"/>
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&hide_border=true&langs_count=8&bg_color=F8F9FC&title_color=7A1F3D&text_color=18181B" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&hide_border=true&langs_count=8&bg_color=121217&title_color=D65A7A&text_color=F4F4F5" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&hide_border=true&langs_count=8&bg_color=121217&title_color=D65A7A&text_color=F4F4F5" width="40%" alt="top languages"/>
   </picture>
 </p>
 
@@ -155,6 +168,8 @@ Gameplay real de **NistalInvaders** (Unity + C#):
 ## 📫 Contact
 
 <p align="center">
+  <a href="https://niistal.github.io/"><img src="https://img.shields.io/badge/Portfolio-niistal.github.io-7A1F3D?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/ikernistal/"><img src="https://img.shields.io/badge/LinkedIn-ikernistal-6D28D9?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="https://github.com/Niistal"><img src="https://img.shields.io/badge/GitHub-Niistal-18181B?style=for-the-badge&logo=github&logoColor=white"/></a>
   <a href="mailto:ikernistal77@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-991B3D?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://citrino.solutions/"><img src="https://img.shields.io/badge/Citrino-citrino.solutions-18181B?style=for-the-badge&logo=dotnet&logoColor=white"/></a>
