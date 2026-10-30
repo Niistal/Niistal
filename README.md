@@ -120,18 +120,7 @@ Security by design, pragmatic architecture, progressive modernization.
   </picture>
 </p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&bg_color=F8F9FC&title_color=7A1F3D&icon_color=6D28D9&text_color=18181B&border_color=E4E4E7" />
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&bg_color=121217&title_color=D65A7A&icon_color=A78BFA&text_color=F4F4F5&border_color=29292F" />
-    <img src="https://github-readme-stats.vercel.app/api?username=Niistal&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&bg_color=121217&title_color=D65A7A&icon_color=A78BFA&text_color=F4F4F5&border_color=29292F" width="49%" alt="stats"/>
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&hide_border=true&langs_count=8&bg_color=F8F9FC&title_color=7A1F3D&text_color=18181B" />
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&hide_border=true&langs_count=8&bg_color=121217&title_color=D65A7A&text_color=F4F4F5" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Niistal&layout=compact&hide_border=true&langs_count=8&bg_color=121217&title_color=D65A7A&text_color=F4F4F5" width="40%" alt="top languages"/>
-  </picture>
-</p>
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Niistal/Niistal/output/github-contribution-grid-snake.svg?v=2" alt="snake"/>
